@@ -156,7 +156,11 @@ input[type="radio"]:checked+label{
         
     }
 }
-
+@media(max-width: 420px){
+    label{
+        font-size: 0.75rem;
+    }
+}
 
 
 
