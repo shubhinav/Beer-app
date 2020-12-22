@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.beerInfo h1{
+    font-family: 'Libre Baskerville', serif;
+}
+
+input[type="radio"]{
+    opacity: 0;
+}
+
+label{
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: 0.2s color;
+}
+
+label:hover, label:focus{
+    color: rgb(139, 139, 214);
+}
+
+input[type="radio"]:checked+label{
+    color: #f1f1f1;
+    background-color:  rgb(139, 139, 214);
+}
+
+
+.filters{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.header{
+    padding: 2em;
+    /* border-bottom: 1px solid black; */
+    text-align: center;
+    background-color: rgb(139, 139, 214);
+    color: #f1f1f1;
+}
+
+.abvFilter, .ibuFilter{
+    padding: 1em 2em;
+}
+
+.beers{
+    list-style: none;
+    padding: 2em 1em 0.5em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.pages{
+    padding: 0 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.beer-card{
+    text-align: center;
+    background-color: rgb(139, 139, 214);
+    width: 45%;
+    color: #f1f1f1;
+    margin: 1em 0;
+    padding: 1em 1em 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    transform: scale(1.00);
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+.description{
+    margin: 0;
+    position: absolute;
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    text-align: center;
+    background-color: #f1f1f1;
+    color: rgb(139, 139, 214);
+    transition: 400ms;
+    border-radius: 10px;
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    opacity: 0;
+}
+.description span{
+    margin-bottom: 2em;
+}
+
+.beer-card:hover, .beer-card:focus{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+}
+
+.values {
+   display: flex;
+   justify-content: space-between;
+   width: 50%;
+   margin: 2em auto 1em;
+}
+.fas,.pageNumber{
+    font-size: 1.5rem;
+}
+.prevPage, .nextPage,.pageNumber{
+    border: 0;
+    padding: 0.5em;
+}
+.beer-image{
+    max-width: 100%;
+    max-height: 200px;
+}
+
+
+@media(max-width: 1050px){
+    .filters{
+        flex-flow: column wrap;
+        text-align: center;
+    }
+}
+
+@media(max-width: 850px){
+    .beers{
+        flex-direction: column;
+    }
+    .beer-card{
+        width: 90%;
+        margin: 1.5em auto;
+    }
+}
+
+
+
+
+
+

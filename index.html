@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div class="header">
+    <h1>PUNKAPI. BEERS.</h1>
+    <h3>Filter with abv, ibu or both.</h3>
+ </div>
+ <div class="filters">
+    <form class="abvFilter">
+        <input type="radio" id="abvAll" name="abv-filter" value="all" checked>
+        <label for="abvAll">ALL</label>
+
+        <input type="radio" id="abvLeast" name="abv-filter" value="weak">
+        <label for="abvLeast">ABV Low</label>
+
+        <input type="radio" id="abvMid" name="abv-filter" value="mid">
+        <label for="abvMid">ABV Mid</label>
+
+        <input type="radio" id="abvHigh" name="abv-filter" value="strong">
+        <label for="abvHigh">ABV strong</label>
+    </form>
+
+    <form class="ibuFilter">
+        <input type="radio" id="ibuAll" name="ibu-filter" value="all" checked>
+        <label for="ibuAll">ALL</label>
+        
+        <input type="radio" id="ibuLeast" name="ibu-filter" value="weak">
+        <label for="ibuLeast">IBU Low</label>
+        
+        <input type="radio" id="ibuMid" name="ibu-filter" value="mid">
+        <label for="ibuMid">IBU Mid</label>
+        
+        <input type="radio" id="ibuHigh" name="ibu-filter" value="strong">
+        <label for="ibuHigh">IBU Strong</label>
+    </form>
+ </div>
+    
+
+    <ul class="beers">
+
+    </ul>
+
+    <div class="pages">
+        <button class="prevPage"><i class="fas fa-caret-left"></i></button>
+        <span class="pageNumber"></span>
+        <button class="nextPage"><i class="fas fa-caret-right"></i></button>
+    </div>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
