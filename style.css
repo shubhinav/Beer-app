@@ -16,12 +16,16 @@ body{
 
 input[type="radio"]{
     opacity: 0;
+    margin: 0;
 }
 
 label{
     padding: 0.5em;
     border-radius: 5px;
     transition: 0.2s color;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid rgb(139, 139, 214);
 }
 
 label:hover, label:focus{
@@ -135,7 +139,7 @@ input[type="radio"]:checked+label{
 @media(max-width: 1050px){
     .filters{
         flex-flow: column wrap;
-        text-align: center;
+        align-items: center;
     }
 }
 
@@ -146,6 +150,10 @@ input[type="radio"]:checked+label{
     .beer-card{
         width: 90%;
         margin: 1.5em auto;
+    }
+    .abvFilter, .ibuFilter{
+        padding: 1em 0.5em;
+        
     }
 }
 
