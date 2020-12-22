@@ -129,6 +129,7 @@ input[type="radio"]:checked+label{
 .prevPage, .nextPage,.pageNumber{
     border: 0;
     padding: 0.5em;
+    z-index: 999;
 }
 .beer-image{
     max-width: 100%;
