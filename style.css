@@ -89,7 +89,7 @@ input[type="radio"]:checked+label{
 .beer-card{
     text-align: center;
     background-color: rgba(3,101,192,1);
-    width: 45%;
+    width: 30%;
     color: #f1f1f1;
     margin: 1em 0;
     padding: 1em 1em 0;
@@ -161,12 +161,10 @@ input[type="radio"]:checked+label{
     }
 }
 
-@media(max-width: 850px){
-    .beers{
-        flex-direction: column;
-    }
+@media(max-width: 900px){
+    
     .beer-card{
-        width: 90%;
+        width: 45%;
         margin: 1.5em auto;
     }
     .abvFilter, .ibuFilter{
@@ -177,7 +175,13 @@ input[type="radio"]:checked+label{
         width: 70%;
     }
 }
-@media(max-width: 420px){
+@media(max-width: 525px){
+    .beers{
+        flex-direction: column;
+    }
+    .beer-card{
+        width: 90%;
+    }
     label{
         font-size: 0.75rem;
     }
