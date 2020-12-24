@@ -9,9 +9,18 @@ body{
     margin: 0;
     background-color: #f1f1f1;
 }
-
+.title{
+    font-size: 2.75rem;
+    letter-spacing: 1px;
+}
+.sub-title{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
 .beerInfo h1{
     font-family: 'Libre Baskerville', serif;
+    letter-spacing: 1px;
 }
 
 input[type="radio"]{
@@ -22,19 +31,23 @@ input[type="radio"]{
 label{
     padding: 0.5em;
     border-radius: 5px;
-    transition: 0.2s color;
+    transition: 0.2s;
     margin: 0;
     display: inline-block;
-    border: 1px solid rgb(139, 139, 214);
+    box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
 }
 
 label:hover, label:focus{
-    color: rgb(139, 139, 214);
+    color: rgb(3,101,192);
+    box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
+    transform: scale(1.02);
 }
 
 input[type="radio"]:checked+label{
     color: #f1f1f1;
-    background-color:  rgb(139, 139, 214);
+    background-color:  rgb(3,101,192);
+    box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
+    transform: scale(1.1);
 }
 
 
@@ -42,14 +55,14 @@ input[type="radio"]:checked+label{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid gainsboro;
+    color: #333;
 }
 
 .header{
     padding: 2em;
-    /* border-bottom: 1px solid black; */
     text-align: center;
-    background-color: rgb(139, 139, 214);
+    background-color: rgb(3,101,192);
     color: #f1f1f1;
 }
 
@@ -75,7 +88,7 @@ input[type="radio"]:checked+label{
 
 .beer-card{
     text-align: center;
-    background-color: rgb(139, 139, 214);
+    background-color: rgba(3,101,192,1);
     width: 45%;
     color: #f1f1f1;
     margin: 1em 0;
@@ -83,7 +96,7 @@ input[type="radio"]:checked+label{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
     transform: scale(1.00);
     transition: 0.2s;
     border-radius: 10px;
@@ -97,24 +110,27 @@ input[type="radio"]:checked+label{
     height: 100%;
     top: 0;
     left: 0;
-    transform: translateY(100%);
     text-align: center;
     background-color: #f1f1f1;
-    color: rgb(139, 139, 214);
+    color: rgb(3,101,192);
     transition: 400ms;
     border-radius: 10px;
     overflow: auto;
     display: flex;
     flex-flow: column;
     opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.description:hover{
+    opacity: 1;
 }
 .description span{
     margin-bottom: 2em;
 }
 
 .beer-card:hover, .beer-card:focus{
-    transform: scale(1.02);
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+    transform: scale(1.01);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
 .values {
@@ -123,6 +139,7 @@ input[type="radio"]:checked+label{
    width: 50%;
    margin: 2em auto 1em;
 }
+
 .fas,.pageNumber{
     font-size: 1.5rem;
 }
@@ -155,6 +172,9 @@ input[type="radio"]:checked+label{
     .abvFilter, .ibuFilter{
         padding: 1em 0.5em;
         
+    }
+    .values{
+        width: 70%;
     }
 }
 @media(max-width: 420px){

@@ -20,11 +20,13 @@ let page = 1;
 prevPage.addEventListener("click", function(){
     page--;
     getBeers();
+    window.scrollTo(0,100);
 })
 
 nextPage.addEventListener("click", function(){
     page++;
     getBeers();
+    window.scrollTo(0,100);
 })
 
 abvFilter.addEventListener("change", function(e){
@@ -69,30 +71,6 @@ ibuFilter.addEventListener("change", function(e){
     getBeers();
 })
 
-function descriptionHoverAnimation(){
-    const beerCards = document.querySelectorAll(".beer-card")
-    const descriptions = document.querySelectorAll(".description")
-
-    function beerHoverIn(){
-        
-        this.childNodes[1].childNodes[7].style.opacity="0.95";
-        this.childNodes[1].childNodes[7].style.transform="translateY(0%)"
-}
-
-    function beerHoverOut(){
-        this.childNodes[1].childNodes[7].style.opacity="0";
-        this.childNodes[1].childNodes[7].style.transform="translateY(100%)";
-    }
-
-   beerCards.forEach(beerCard=>{
-      beerCard.addEventListener("mouseenter", beerHoverIn)
-   })
-
-   beerCards.forEach(beerCard=>{
-       beerCard.addEventListener("mouseleave", beerHoverOut)
-   })
-}
-
 
 async function getBeers(){
 
@@ -133,8 +111,6 @@ async function getBeers(){
 
     beers.innerHTML = html;
     pageNumber.textContent = page;
-
-    descriptionHoverAnimation();
 
     
 }
